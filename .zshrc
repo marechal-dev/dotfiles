@@ -52,9 +52,5 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 # asdf
 . "$HOME/.asdf/asdf.sh"
 
-# fnm
-export PATH="/home/marechal-dev/.local/share/fnm:$PATH"
-eval "`fnm env`"
-
 # Use zsh-autosuggestions
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
