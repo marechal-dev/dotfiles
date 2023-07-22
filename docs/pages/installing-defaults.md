@@ -10,7 +10,7 @@ sudo pacman -S base-devel git unzip wget openssh neovim htop the_silver_searcher
 
 ```sh
 # These packages HAVE to be installed with pacman in order to work properly!
-sudo pacman -S pkgconf dbus gtk3 libsoup webkit2gtk
+sudo pacman -S pkgconf dbus gtk3 libsoup webkit2gtk alsa-lib
 ```
 
 3. `git clone` this repo
