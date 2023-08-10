@@ -70,3 +70,9 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 ```
 
 10. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
+
+11. Install utils
+
+```sh
+sudo yay -S bat exa broot fd ripgrep
+```
