@@ -3,7 +3,13 @@
 1. Basic packages
 
 ```sh
-sudo pacman -S base-devel git unzip wget openssh neovim htop the_silver_searcher lazygit github-cli jdk-openjdk python python-pip python-pynvim
+sudo pacman -S base-devel git unzip wget openssh neovim htop the_silver_searcher lazygit github-cli jdk-openjdk python python-pip python-pynvim man-db
+```
+
+then install `man-pages` (they should be installed after `man-db`)
+
+```sh
+sudo pacman -S man-pages
 ```
 
 2. Packages for working with `wslg` (Windows Subsystem For Linux GUI)

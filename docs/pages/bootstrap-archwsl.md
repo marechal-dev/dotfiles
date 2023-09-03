@@ -33,3 +33,9 @@ exit
 ```powershell
 .\Arch.exe config --default-user marechal-dev
 ```
+
+9. On Arch, run a full system update
+
+```sh
+sudo pacman -Syyuu
+```
