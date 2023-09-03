@@ -67,18 +67,39 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0 \
 asdf update
 ```
 
-9. Install `asdf` plugins
+9. Install `python` prerequirements
+
+```sh
+yay -S tk
+```
+
+10. Install `ruby` prerequirements
+
+```sh
+yay -S libyaml
+```
+
+11. Install `php` prerequirements
+
+```sh
+yay -S autoconf bison gettext gd libcurl-openssl-1.0 libedit icu libjpeg-turbo libmysqlclient libogg oniguruma libpng postgresql-libs readline sqlite openssl libxml2 libzip re2c zlib freetype2 automake krb5 libiconv
+```
+
+12. Install `asdf` plugins
 
 ```sh
 asdf plugin-add lua https://github.com/Stratus3D/asdf-lua.git \
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git \
 asdf plugin-add rust https://github.com/code-lever/asdf-rust.git \
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git \
+asdf plugin add python \
+asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git \
+asdf plugin add php https://github.com/asdf-community/asdf-php.git \
 ```
 
-10. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
+13. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
 
-11. Install utils
+14. Install utils
 
 ```sh
 sudo yay -S bat exa broot fd ripgrep
