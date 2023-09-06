@@ -3,20 +3,26 @@
 1. Basic packages
 
 ```sh
-sudo pacman -S base-devel git unzip wget openssh neovim htop the_silver_searcher lazygit github-cli jdk-openjdk python python-pip python-pynvim man-db
+sudo pacman -S base-devel coreutils git unzip wget openssh neovim htop the_silver_searcher lazygit github-cli jdk-openjdk
 ```
 
-then install `man-pages` (they should be installed after `man-db`)
+then install `man`
 
 ```sh
-sudo pacman -S man-pages
+sudo pacman -S man-db man-pages
+```
+
+and update the `man` database
+
+```sh
+sudo mandb
 ```
 
 2. Packages for working with `wslg` (Windows Subsystem For Linux GUI)
 
 ```sh
 # These packages HAVE to be installed with pacman in order to work properly!
-sudo pacman -S pkgconf dbus gtk3 libsoup webkit2gtk alsa-lib
+sudo pacman -S pkgconf dbus gtk3 libsoup webkit2gtk alsa-lib tk
 ```
 
 3. `git clone` this repo
@@ -67,22 +73,21 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0 \
 asdf update
 ```
 
-9. Install `python` prerequirements
-
-```sh
-yay -S tk
-```
-
-10. Install `ruby` prerequirements
+9. Install `ruby` prerequirements
 
 ```sh
 yay -S libyaml
 ```
 
-11. Install `php` prerequirements
+10. Install `php` prerequirements
 
 ```sh
 yay -S autoconf bison gettext gd libcurl-openssl-1.0 libedit icu libjpeg-turbo libmysqlclient libogg oniguruma libpng postgresql-libs readline sqlite openssl libxml2 libzip re2c zlib freetype2 automake krb5 libiconv
+```
+
+11. Install `erlang` prerequirements
+```sh
+yay -S ncurses glu mesa wxwidgets-gtk3 libpng libssh unixodbc libxslt fop
 ```
 
 12. Install `asdf` plugins
@@ -95,6 +100,8 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git \
 asdf plugin add python \
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git \
 asdf plugin add php https://github.com/asdf-community/asdf-php.git \
+asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git \
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 ```
 
 13. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
@@ -102,5 +109,5 @@ asdf plugin add php https://github.com/asdf-community/asdf-php.git \
 14. Install utils
 
 ```sh
-sudo yay -S bat exa broot fd ripgrep
+sudo yay -S bat exa broot fd ripgrep httpie
 ```
