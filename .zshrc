@@ -54,3 +54,17 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 
 # Use zsh-autosuggestions
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# pnpm
+export PNPM_HOME="/home/marechal-dev/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/marechal-dev/google-cloud-sdk/path.zsh.inc' ]; then . '/home/marechal-dev/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/marechal-dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/marechal-dev/google-cloud-sdk/completion.zsh.inc'; fi
