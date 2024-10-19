@@ -35,6 +35,7 @@ export PROMPT_EOL_MARK=''
 alias zshconfig="nvim $HOME/.zshrc"
 alias here="explorer.exe ."
 alias dev="cd $HOME/Dev"
+alias src="cd $HOME/Dev/Source"
 alias me="cd $HOME/Dev/Source/Projects/Personal"
 alias learn="cd $HOME/Dev/Source/Learning"
 
