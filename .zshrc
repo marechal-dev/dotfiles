@@ -34,20 +34,12 @@ export PROMPT_EOL_MARK=''
 # Personal Aliases
 alias zshconfig="nvim $HOME/.zshrc"
 alias here="explorer.exe ."
-alias dev="cd $HOME/DevEnv"
-alias www="cd $HOME/DevEnv/Personal/Source/Web"
-alias work="cd $HOME/DevEnv/Work/Source"
+alias dev="cd $HOME/Dev"
+alias me="cd $HOME/Dev/Source/Projects/Personal"
+alias learn="cd $HOME/Dev/Source/Learning"
 
 # Setting display for wslg
 export DISPLAY=:0
-
-# Java + Android Tools for React Native (it doesn't work)
-export ANDROID_HOME="$HOME/Android"
-export JAVA_HOME="/usr/lib/jvm/java-20-openjdk"
-export PATH="$JAVA_HOME/bin:$PATH"
-export PATH="$ANDROID_HOME/cmdline-tools/tools:$PATH"
-export PATH="$ANDROID_HOME/cmdline-tools/tools/bin:$PATH"
-export PATH="$ANDROID_HOME/platform-tools:$PATH"
 
 # asdf
 . "$HOME/.asdf/asdf.sh"
