@@ -3,7 +3,7 @@
 1. Basic packages
 
 ```sh
-sudo pacman -S base-devel coreutils git unzip wget openssh neovim htop the_silver_searcher lazygit github-cli jdk-openjdk
+sudo pacman -S base-devel coreutils git unzip wget openssh neovim htop the_silver_searcher lazygit github-cli
 ```
 
 then install `man`
@@ -85,28 +85,29 @@ yay -S libyaml
 yay -S autoconf bison gettext gd libcurl-openssl-1.0 libedit icu libjpeg-turbo libmysqlclient libogg oniguruma libpng postgresql-libs readline sqlite openssl libxml2 libzip re2c zlib freetype2 automake krb5 libiconv
 ```
 
-11. Install `erlang` prerequirements
-```sh
-yay -S ncurses glu mesa wxwidgets-gtk3 libpng libssh unixodbc libxslt fop
-```
-
-12. Install `asdf` plugins
+9. Install languages prerequirements
 
 ```sh
-asdf plugin-add lua https://github.com/Stratus3D/asdf-lua.git \
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git \
-asdf plugin-add rust https://github.com/code-lever/asdf-rust.git \
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git \
-asdf plugin add python \
-asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git \
-asdf plugin add php https://github.com/asdf-community/asdf-php.git \
-asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git \
-asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+chmod +x .dotfiles/install_asdf_plugins.sh
 ```
 
-13. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
+```sh
+.dotfiles/install_asdf_plugins.sh
+```
 
-14. Install utils
+10. Install `asdf` plugins
+
+```sh
+chmod +x .dotfiles/install_asdf_plugins.sh
+```
+
+```sh
+.dotfiles/install_asdf_plugins
+```
+
+11. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
+
+12. Install utils
 
 ```sh
 sudo yay -S bat exa broot fd ripgrep httpie

@@ -12,7 +12,7 @@ passwd
 5. Setup `sudoers` file
 
 ```sh
- echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
 ```
 
 6. Add user
@@ -24,7 +24,10 @@ useradd -m -G wheel -s /bin/bash marechal-dev
 7. Setup the password and exit
 
 ```sh
-passwd marechal-dev \
+passwd marechal-dev
+```
+
+```sh
 exit
 ```
 
@@ -34,7 +37,25 @@ exit
 .\Arch.exe config --default-user marechal-dev
 ```
 
-9. On Arch, run a full system update
+9. On Arch, Initialize the keyring
+
+```sh
+sudo pacman-key --init
+```
+
+10. Populate it
+
+```sh
+sudo pacman-key --populate
+```
+
+11. Install the keyring
+
+```sh
+sudo pacman -Sy archlinux-keyring
+```
+
+12. Run a full system update
 
 ```sh
 sudo pacman -Syyuu

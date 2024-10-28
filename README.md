@@ -6,10 +6,6 @@ My personal dotfiles 😄
 
 [See here!](./docs/pages/bootstrap-archwsl.md)
 
-### Setting up `pacman`
-
-[See here](./docs/pages/setting-up-pacman.md)
-
 ### Installing defaults
 
 [See here](./docs/pages/installing-defaults.md)
