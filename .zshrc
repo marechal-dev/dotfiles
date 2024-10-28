@@ -21,6 +21,9 @@ plugins=(git)
 # Start!
 source $ZSH/oh-my-zsh.sh
 
+# Setup JAVA_HOME with asdf
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
