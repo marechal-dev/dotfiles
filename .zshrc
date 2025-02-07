@@ -36,11 +36,17 @@ export PROMPT_EOL_MARK=''
 
 # Personal Aliases
 alias zshconfig="nvim $HOME/.zshrc"
-alias here="explorer.exe ."
+alias winhere="explorer.exe ."
 alias dev="cd $HOME/Dev"
 alias src="cd $HOME/Dev/Source"
 alias me="cd $HOME/Dev/Source/Projects/Personal"
+alias job="cd $HOME/Dev/Source/Projects/Professional"
 alias learn="cd $HOME/Dev/Source/Learning"
+alias luchml="$HOME/ssh/luchml.sh"
+alias lucprd="$HOME/ssh/lucprd.sh"
+alias bls="eza --color=always --icons=always --long --git --all --no-user"
+alias wttrpoa="curl wttr.in/Porto+Alegre,Brazil"
+alias wttrrg="curl wttr.in/Rio+Grande,Brazil"
 
 # Setting display for wslg
 export DISPLAY=:0
@@ -64,3 +70,10 @@ if [ -f '/home/marechal-dev/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mare
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/marechal-dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/marechal-dev/google-cloud-sdk/completion.zsh.inc'; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# broot config
+source /home/marechal-dev/.config/broot/launcher/bash/br
