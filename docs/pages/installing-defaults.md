@@ -110,5 +110,15 @@ chmod +x .dotfiles/install_asdf_plugins.sh
 12. Install utils
 
 ```sh
-sudo yay -S bat exa broot fd ripgrep httpie
+sudo yay -S bat eza broot fd ripgrep httpie jq tlrc-bin lazydocker lazygit kdash gdb navi task
+```
+
+13. Install `gdb-dashboard`
+```sh
+wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit
+```
+
+14. Install `pygments` for `gdb-dashboard`
+```sh
+pip install pygments
 ```
