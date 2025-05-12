@@ -21,9 +21,6 @@ plugins=(git)
 # Start!
 source $ZSH/oh-my-zsh.sh
 
-# Setup JAVA_HOME with asdf
-. ~/.asdf/plugins/java/set-java-home.zsh
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -44,15 +41,14 @@ alias job="cd $HOME/Dev/Source/Projects/Professional"
 alias learn="cd $HOME/Dev/Source/Learning"
 alias luchml="$HOME/ssh/luchml.sh"
 alias lucprd="$HOME/ssh/lucprd.sh"
+alias sbrk="./Scripts/stop.sh"
+alias brk="./Scripts/run.sh"
 alias bls="eza --color=always --icons=always --long --git --all --no-user"
 alias wttrpoa="curl wttr.in/Porto+Alegre,Brazil"
 alias wttrrg="curl wttr.in/Rio+Grande,Brazil"
 
 # Setting display for wslg
 export DISPLAY=:0
-
-# asdf
-. "$HOME/.asdf/asdf.sh"
 
 # Use zsh-autosuggestions
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -64,16 +60,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/marechal-dev/google-cloud-sdk/path.zsh.inc' ]; then . '/home/marechal-dev/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/marechal-dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/marechal-dev/google-cloud-sdk/completion.zsh.inc'; fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # broot config
 source /home/marechal-dev/.config/broot/launcher/bash/br

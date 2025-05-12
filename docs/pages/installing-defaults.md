@@ -37,7 +37,7 @@ git clone https://github.com/marechal-dev/dotfiles.git
 
 4. Execute the `setup.sh` to create the symlinks
 
-```
+```sh
 ./.dotfiles/setup.sh
 ```
 
@@ -69,8 +69,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 
 ```sh
 cd \
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0 \
-asdf update
+yay -S asdf-vm
 ```
 
 9. Install `ruby` prerequirements
@@ -88,21 +87,13 @@ yay -S autoconf bison gettext gd libcurl-openssl-1.0 libedit icu libjpeg-turbo l
 9. Install languages prerequirements
 
 ```sh
-chmod +x .dotfiles/install_asdf_plugins.sh
-```
-
-```sh
-.dotfiles/install_asdf_plugins.sh
+chmod +x .dotfiles/install_asdf_plugins.sh && .dotfiles/install_asdf_plugins.sh
 ```
 
 10. Install `asdf` plugins
 
 ```sh
-chmod +x .dotfiles/install_asdf_plugins.sh
-```
-
-```sh
-.dotfiles/install_asdf_plugins
+chmod +x .dotfiles/install_asdf_plugins.sh && .dotfiles/install_asdf_plugins
 ```
 
 11. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
@@ -114,11 +105,13 @@ sudo yay -S bat eza broot fd ripgrep httpie jq tlrc-bin lazydocker lazygit kdash
 ```
 
 13. Install `gdb-dashboard`
+
 ```sh
 wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit
 ```
 
 14. Install `pygments` for `gdb-dashboard`
+
 ```sh
 pip install pygments
 ```
