@@ -16,7 +16,7 @@ zstyle ':omz:update' mode reminder
 HIST_STAMPS="dd.mm.yyyy"
 
 # Plugins
-plugins=(git)
+plugins=(aliases git docker docker-compose archlinux systemadmin)
 
 # Start!
 source $ZSH/oh-my-zsh.sh
@@ -36,13 +36,9 @@ alias zshconfig="nvim $HOME/.zshrc"
 alias winhere="explorer.exe ."
 alias dev="cd $HOME/Dev"
 alias src="cd $HOME/Dev/Source"
-alias me="cd $HOME/Dev/Source/Projects/Personal"
-alias job="cd $HOME/Dev/Source/Projects/Professional"
+alias me="cd $HOME/Dev/Source/Personal"
+alias job="cd $HOME/Dev/Source/Professional"
 alias learn="cd $HOME/Dev/Source/Learning"
-alias luchml="$HOME/ssh/luchml.sh"
-alias lucprd="$HOME/ssh/lucprd.sh"
-alias sbrk="./Scripts/stop.sh"
-alias brk="./Scripts/run.sh"
 alias bls="eza --color=always --icons=always --long --git --all --no-user"
 alias wttrpoa="curl wttr.in/Porto+Alegre,Brazil"
 alias wttrrg="curl wttr.in/Rio+Grande,Brazil"
@@ -60,6 +56,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# broot config
-source /home/marechal-dev/.config/broot/launcher/bash/br
